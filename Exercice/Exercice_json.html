@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Liste des voitures avec leurs modeles</h3>
+    <p id="demo"></p>
+    <script>
+      var myObj = {
+        voitures: [
+          { nom: "Ford", modeles: ["Fiesta", "Focus", "Mustang"] },
+          { nom: "BMW", modeles: ["320", "X3", "X5"] },
+          { nom: "Fiat", modeles: ["500", "Panda"] },
+        ],
+      };
+      var x = "";
+      for (i in myObj.voitures) {
+        x += "<h3>" + myObj.voitures[i].nom + "</h3>";
+        for (j in myObj.voitures[i].modeles) {
+          x += myObj.voitures[i].modeles[j] + "<br>";
+        }
+      }
+      document.getElementById("demo").innerHTML = x;
+    </script>
+  </body>
+</html>
